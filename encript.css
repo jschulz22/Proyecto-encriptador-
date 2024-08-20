@@ -1,18 +1,19 @@
-body{
+/* Estilo por defecto (para pantallas grandes como computadoras de escritorio) */
+body {
     background-color: #F3F5FC;
     font-family: 'Inter';
     font-weight: 400;
     font-size: 2rem; /* 32px / 16px */
-    line-height: 150%;
+    line-height: 100%;
 }
 
-.logo{
+.logo {
     padding-top: 0.625rem; /* 10px / 16px */
     margin-left: 0.625rem; /* 10px / 16px */
-    width: 10%;
+    width: 7%;
 }
 
-main{
+main {
     display: flex;
     margin-bottom: 0.625rem; /* 10px / 16px */
     margin-left: 11.25rem; /* 180px / 16px */
@@ -27,14 +28,6 @@ main{
     font-family: 'Inter';
     font-size: 1.875rem; /* 30px / 16px */
     text-transform: lowercase;
-}
-
-::placeholder { 
-    color: #0A3871; 
-}
-
-.text-area:focus {
-    outline: none;
 }
 
 .mensaje {
@@ -54,54 +47,127 @@ main{
     position: fixed;
 }
 
-.mensaje:focus {
-    outline: none;
-}
-
 .Botones {
     display: flex;
     margin-top: 1.125rem; /* 18px / 16px */
 }
 
+.boton-desencriptar, .boton-encriptar, .copiar {
+    border-radius: 1.5rem; /* 24px / 16px */
+    height: 4.1875rem; /* 67px / 16px */
+    width: 20.5rem; /* 328px / 16px */
+    font-size: 1.3rem; /* Tamaño de fuente general para botones */
+}
+
 .boton-desencriptar {
     background: #D8DFE8;
     border: 1px solid #0A3871;
-    border-radius: 1.5rem; /* 24px / 16px */
     color: #0A3871;
-    cursor: pointer;
-    height: 4.1875rem; /* 67px / 16px */
     margin-left: 1.875rem; /* 30px / 16px */
-    width: 20.5rem; /* 328px / 16px */
-    font-size: 0.75rem;
 }
 
 .boton-encriptar {
     background-color: #0A3871;
     border: 1px solid #0A3871;
-    border-radius: 1.5rem; /* 24px / 16px */
     color: white;
-    cursor: pointer;
-    height: 4.1875rem; /* 67px / 16px */
-    width: 20.5rem; /* 328px / 16px */
-    font-size: 0.75rem;
-
 }
 
 .copiar {
     border: 1px solid #0A3871;
-    border-radius: 1.5rem; /* 24px / 16px */
     color: #0A3871;
-    cursor: pointer;
-    height: 4.1875rem; /* 67px / 16px */
     margin-left: 7.5rem; /* 120px / 16px */
     margin-top: 35.3125rem; /* 565px / 16px */
     position: absolute;
     width: 21rem; /* 336px / 16px */
-    font-size: 0.75rem;
-
 }
 
 .información {
     color: #495057;
     font-size: 1.125rem; /* 18px / 16px */
+}
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.5rem; /* Reducir el tamaño de la fuente */
+        flex-direction: column;
+    }
+    
+    main {
+        margin-left: 5rem; 
+        flex-direction: column;/* Ajustar el margen para pantallas más pequeñas */
+    }
+
+    .mensaje {
+        height: 12.8rem; /* Ajustar altura del mensaje */
+        width: 34rem; /* Ajustar ancho del mensaje */
+        margin-left: 2rem; /* Ajustar margen izquierdo */
+    }
+
+    .Botones {
+        align-items: center;
+        margin-top: 1.125rem; /* 18px / 16px */
+
+
+    }
+
+    .boton-desencriptar, .boton-encriptar, .copiar {
+        width: 18rem; /* Ajustar ancho de los botones */
+        margin-left: 1;
+    }
+    
+    .copiar {
+        margin-top: 17rem; /* Ajustar margen superior del botón copiar */
+    }
+}
+
+/* Celulares (pantallas pequeñas) */
+@media (max-width: 375px) {
+    body {
+        font-size: 1rem; /* Reducir aún más el tamaño de la fuente */
+    }
+    
+    .logo {
+        width: 15%;
+    }
+
+    main {
+        margin-left: 1rem;
+        margin-right: 1rem; /* Ajustar el margen para pantallas pequeñas */
+        flex-direction: column;/* Ajustar el margen para pantallas más pequeñas */
+
+    }
+
+    .text-area {
+        height: 15rem; /* Ajustar altura del área de texto */
+        width: 20rem;
+        font-size: 1rem; /* Reducir tamaño de fuente */
+        margin-right: 0.4rem;
+        margin-left: 0.4rem;
+    }
+
+    .mensaje {
+        height: 10rem; /* Ajustar altura del mensaje */
+        width: 20rem; /* Ajustar ancho del mensaje */
+        margin-left: 0.4rem; /* Ajustar margen izquierdo */
+        margin-right: 0.4rem;
+    }
+
+    .boton-desencriptar, .boton-encriptar, .copiar {
+        width: 14rem; /* Ajustar el ancho de los botones */
+        height: auto;
+        align-items: center;
+        font-size: 1rem; /* Reducir tamaño de fuente */
+    }
+    
+    .copiar {
+        align-items: center;
+        margin-top: 18rem; /* Ajustar margen superior del botón copiar */
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+
+@media (max-width:768px){
+
 }
